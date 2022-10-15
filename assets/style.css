@@ -70,6 +70,10 @@ footer{
     height: auto;
 }
 
+footer p{
+    font-size: 15px;
+}
+
 .info{
     display: flex;
     justify-content: space-around;
@@ -81,13 +85,29 @@ footer{
     flex-direction: column;
     list-style: none;
     justify-content: space-around;
+    padding-top: 10px;
+}
+
+.info ul li a{
+    text-decoration: none;
+    font-size: 20px;
+    color: rgb(126, 30, 6);
 }
 
 
-h1{
-    color:rgb(126, 30, 6);
-    font-family: 'Montserrat', sans-serif;
-   
+.info ul li a:hover{
+    color: black;
+}
+
+.info h4{
+    text-decoration:underline;
+    margin: 5px auto 10px;
+}
+
+.info h4,
+.info p{
+    font-size: 20px;
+    color: rgb(46, 14, 6);
 }
 
 .map{
@@ -95,8 +115,31 @@ h1{
     height: 80%;
 }
 
-/*Main*/
-/*Index*/
+/* Inicio Home*/
+
+h1{
+    margin-top: 20px;
+    color:rgb(126, 30, 6);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 60px;
+    animation-name: titulo;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in;
+}
+
+@keyframes titulo {
+    from {
+       font-size: 60px; 
+    }
+    to{
+        font-size: 80px
+    }
+}
+
+main{
+    background-color: rgba(251, 200, 98, 0.4);
+}
 .mainIndex{
     display: flex;
     flex-direction: row;
@@ -112,9 +155,65 @@ h1{
 }
 
 .principal p{
+    margin-top: 60px;
     font-size: calc(1vh + 2vw);
-
+    text-align: center;
+    color: rgb(10, 2, 0);
+    font-family: 'Montserrat', sans-serif;
+    
 }
+
+.segundo-contenedor{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background-color: rgba(251, 200, 98, 0.4);
+}
+
+span{
+    text-shadow: 3px 6px 5px rgba(10, 2, 0, 0.8) ;
+    font-size: 40px;
+}
+
+.contenido-1{
+    max-width: 400px;
+    box-sizing: border-box;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.contenido-1:hover{
+    background-color:  rgb(213, 162, 61);
+   
+    
+}
+.contenido-1 img{
+    transform: scale(1);
+    transition: all 0.5s ease;
+}
+
+.contenido-1:hover img{
+    transform: scale(1.05);
+    overflow: hidden;
+}
+
+.contenido-1 h3 {
+    margin-bottom: 10px;
+    text-align: center;
+    font-family:'Montserrat', sans-serif;
+    color:rgb(126, 30, 6) ;
+    font-size: 15px;
+    transition: font-size 0.5s;
+}
+
+.contenido-1:hover h3{
+    font-size: 20px;
+    overflow: hidden;
+}
+
+
+/* Fin Home*/
 
 /*Quienes Somos*/
 .mainQS{
@@ -160,6 +259,48 @@ h1{
     height: 50vh;
 }
 
+
+/*Sugerencias*/
+
+.tituloSugerencias{
+    font-size: calc(2vw + 1vh);
+    color:rgb(126, 30, 6) ;
+    text-align: center;
+    margin: 0.5vh 5vh 0.5vh ; 
+    padding: 1.5vh;
+}
+
+.sugerido{
+    display: grid;
+    grid-template-columns: 30% 70%;
+    margin: 1.5vh 20vh 0.5vh ;
+    gap: 5px;
+    border: 1px solid rgb(88, 21, 21);
+    border-radius: 5px;
+}
+
+.sugerido p{
+    font-size: calc(1.5vw + 1vh);
+    margin: 3vw ;
+    color: rgb(87, 65, 6) ;
+    text-align: center;
+}
+
+.sugerido img{
+    padding: 15px ;
+    transform: scale(1);
+    transition: all 0.5s ease;
+    width: 100%;
+   }
+
+   .sugerido img:hover{
+    transform: scale(1.05);
+    overflow: hidden;
+}
+
+
+/*Fin sugerencias*/
+
 @media (max-width:600px) {
     .cartel{
         display: grid;
@@ -171,6 +312,28 @@ h1{
     .cartelTexto{
         width: 100%;
     }
+
+    .mainIndex {
+        display: grid;
+        grid-template-columns: 100% ;
+       text-align: center;
+    }
+
+    .principal p{
+        margin-top: 10px;
+    }
+
+    .segundo-contenedor {
+        display: grid;
+        grid-template-columns: 100% ;
+       text-align: center;
+      
+    }
+    .contenido-1{
+        max-width: none;
+        margin: 0;
+    }
+   
 }
 /* celular */
 @media (min-width: 700px) and (min-height:1500px) {
@@ -201,10 +364,27 @@ h1{
     .cartelTexto{
         width: 100%;
     }
+
+    .mainIndex {
+        display: grid;
+        grid-template-columns: 100% ;
+       text-align: center;
+    }
+    .segundo-contenedor {
+        display: grid;
+        grid-template-columns: 100% ;
+       text-align: center;
+      
+    }
+    .contenido-1{
+        max-width: none;
+        margin: 0;
+    }
     footer{
         font-size:large;
         height: auto;
     }
 }
+
 
 
