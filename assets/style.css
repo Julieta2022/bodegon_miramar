@@ -146,14 +146,15 @@ main{
 .mainIndex{
     display: flex;
     flex-direction: row;
-	
+	justify-content: space-evenly;
     background-color: rgba(251, 200, 98, 0.4);
     width:auto;
 }
-.principal{
-    margin: 5vh;
+.principal h1{
+    margin: 15vh;
 	
 }
+
 .mainIndex img{
     width: 55vw;
 }
