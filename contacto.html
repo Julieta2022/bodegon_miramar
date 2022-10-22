@@ -8,6 +8,9 @@
         <script src="https://kit.fontawesome.com/09f0f12084.js" crossorigin="anonymous"></script>
         <title>MIRAMAR</title>
         <link rel="stylesheet" href="./assets/style.css"> 
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans&display=swap" rel="stylesheet">
     </head>
     <body>
         <header>
@@ -26,12 +29,13 @@
         <main>
             <form action="">
                 <h2>Formulario de Contacto</h2>
-                <input type="text" name="nombre" placeholder="Nombre">
-                <input type="text" name="apellido" placeholder="Apellido">
-                <input type="email" name="email" placeholder="Email">
+                <div id='resultadoValidacion'></div>
+                <input type="text" id="nombre" name="nombre" placeholder="Nombre">
+                <input type="text" id='apellido' name="apellido" placeholder="Apellido">
+                <input type="email" id='email' name="email" placeholder="Email">
                 <input type="tel" name="telefono" placeholder="Teléfono">
                 <textarea name="mensaje" placeholder="Escriba su mensaje"></textarea>
-                <input type="button" value="Enviar" id="boton">
+                <input value="Enviar" id="boton" onclick="validar()">
             </form>
             <h2>¿Dónde estamos?</h2>
             <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13133.077881085283!2d-58.393705!3d-34.62263!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xe1259fe1e5d7afdd!2sRotiser%C3%ADa%20Miramar!5e0!3m2!1ses!2sar!4v1665781454095!5m2!1ses!2sar" width="600px" height="450px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
@@ -75,5 +79,7 @@
             </div>
             <p class="copyright">Copyright © 2022</p>
         </footer>
+        
+        <script src="./js/contacto.js"></script>
     </body>
 </html>

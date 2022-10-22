@@ -120,7 +120,7 @@ footer p{
 /* Inicio Home*/
 
 h1{
-    margin-top: 19px;
+    
     color:rgb(126, 30, 6);
     font-family: 'Montserrat', sans-serif;
     font-size: 40px;
@@ -299,7 +299,9 @@ main h2{
     padding: 10px;
 }
 
-
+.pieFoto h4, p{
+    padding: 5px;
+}
 
 /*Fin sugerencias*/
 
